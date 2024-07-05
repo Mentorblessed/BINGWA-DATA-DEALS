@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingwa Packages Order Form</title>
+    <style>
+        .place-order-button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TELEDEALS BINGWA SOKONI SERVICES</h1>
+
+    <h2>SPECIAL OFFERS</h2>
+    <ul>
+        <li>
+            Ksh 19 - 250mbs valid for 24hrs
+            <button class="place-order-button" onclick="placeOrder('Ksh 19 - 250mbs valid for 24hrs')">Place Order</button>
+        </li>
+        <li>
+            Ksh 95 - 1gb valid for 24hours
+            <button class="place-order-button" onclick="placeOrder('Ksh 95 - 1gb valid for 24hours')">Place Order</button>
+        </li>
+        <li>
+            Ksh 53 - 1.25gb until midnight
+            <button class="place-order-button" onclick="placeOrder('Ksh 53 - 1.25gb until midnight')">Place Order</button>
+        </li>
+        <li>
+            Ksh 47 - 50mins until midnight
+            <button class="place-order-button" onclick="placeOrder('Ksh 47 - 50mins until midnight')">Place Order</button>
+        </li>
+    </ul>
+
+    <h2>WEEKLY OFFERS</h2>
+    <ul>
+        <li>
+            Ksh 47 - 350mbs
+            <button class="place-order-button" onclick="placeOrder('Ksh 47 - 350mbs')">Place Order</button>
+        </li>
+        <li>
+            Ksh 230 - 200mins
+            <button class="place-order-button" onclick="placeOrder('Ksh 230 - 200mins')">Place Order</button>
+        </li>
+        <li>
+            Ksh 285 - 2.5gb
+            <button class="place-order-button" onclick="placeOrder('Ksh 285 - 2.5gb')">Place Order</button>
+        </li>
+        <li>
+            Ksh 475 - 500mins
+            <button class="place-order-button" onclick="placeOrder('Ksh 475 - 500mins')">Place Order</button>
+        </li>
+    </ul>
+
+    <h2>CALLS & SMS AIRTIME WITH EXPIRY</h2>
+    <ul>
+        <li>
+            Ksh 47 - 100 airtime valid for 24hrs
+            <button class="place-order-button" onclick="placeOrder('Ksh 47 - 100 airtime valid for 24hrs')">Place Order</button>
+        </li>
+        <li>
+            Ksh 19 - 40 airtime valid for 24hrs
+            <button class="place-order-button" onclick="placeOrder('Ksh 19 - 40 airtime valid for 24hrs')">Place Order</button>
+        </li>
+        <li>
+            Ksh 95 - 200 airtime valid for 24hrs
+            <button class="place-order-button" onclick="placeOrder('Ksh 95 - 200 airtime valid for 24hrs')">Place Order</button>
+        </li>
+    </ul>
+
+    <script>
+        function placeOrder(packageDetails) {
+            var phoneNumber = "+254746357646";
+            var message = encodeURIComponent("I would like to place an order for the following package: " + packageDetails);
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>
+</body>
+</html>
